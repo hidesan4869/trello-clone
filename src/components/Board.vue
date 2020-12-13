@@ -18,8 +18,8 @@
 </template>
 
 <script>
-import ListAdd from './ListAdd.vue'
-import List from './List.vue'
+import ListAdd from './ListAdd'
+import List from './List'
 import { mapState } from 'vuex'
 
 export default {

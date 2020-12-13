@@ -1,8 +1,8 @@
 <template>
   <div class="list">
-    <div class="listheadet">
+    <div class="listheader">
       <p class="list-title">{{ title }}</p>
-      <div class="deletelist" @click="removeList"></div>
+      <div class="deletelist" @click="removeList">x</div>
     </div>
   </div>
 </template>
@@ -22,7 +22,7 @@
     methods: {
       removeList: function() {
         if(confirm('本当にこのリストを削除しますか？')) {
-          this.$store.dispatch('removelist', { listIndex: this.listIndex})
+          this.$store.dispatch('removeList', { listIndex: this.listIndex})
         }
       },
     }

@@ -9,7 +9,7 @@ const store = new Vuex.Store({
   state: {
     lists: savedLists ? JSON.parse(savedLists): [
       {
-        title: 'Backing',
+        title: 'Backlog',
         cards: [
           {body: 'English'},
           {body: 'Mathematics'},
@@ -30,7 +30,10 @@ const store = new Vuex.Store({
 
   mutations: {
     addlist(state, payload) {
-      state.lists.push({ title: payload, cards:[]})
+      state.lists.push({ title: payload, cards:[] })
+    },
+    removeList(state, payload) {
+      state.lists.splice(payload.listIndex, 1)
     },
   },
 
@@ -38,10 +41,13 @@ const store = new Vuex.Store({
     addlist(context, payload) {
       context.commit('addlist', payload)
     },
+    removeList(context, payload) {
+      context.commit('removeList', payload)
+    },
   },
 
   getters: {
-  }
+  },
 })
 
 store.subscribe((mutation, state) => {
