@@ -11,7 +11,7 @@
               :title="item.title"
               :listIndex="index"
           />
-        <list-add />
+        <ListAdd />
       </div>
     </main>
   </div>
@@ -23,7 +23,6 @@ import List from './List'
 import { mapState } from 'vuex'
 
 export default {
-  
   components: {
     ListAdd,
     List,
@@ -32,6 +31,6 @@ export default {
     ...mapState([
       'lists'
     ]),
-   }
+   },
  }
 </script>

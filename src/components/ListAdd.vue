@@ -40,7 +40,7 @@ export default {
   },
   methods: {
     addlist(){
-      this.$store.dispatch('addlist', this.title)
+      this.$store.dispatch('addlist', {title: this.title})
       this.title = ''
     },
     startEditing() {
