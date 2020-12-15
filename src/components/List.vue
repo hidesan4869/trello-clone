@@ -2,6 +2,7 @@
   <div class="list">
     <div class="listheader">
       <p class="list-title">{{ title }}</p>
+      <p class="list-counter">total:{{ totalCardList }}</p>
       <div class="deletelist" @click="removeList">x</div>
     </div>
     <Card v-for="(item, index) in cards"
@@ -36,6 +37,11 @@ import Card from './Card'
       listIndex: {
         type: Number,
         required: true
+      }
+    },
+    computed: {
+      totalCardList() {
+        return this.cards.length
       }
     },
     methods: {
