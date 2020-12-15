@@ -9,7 +9,7 @@
         />
     <button type="submit"
             class="add-button"
-            v-if="isEdithing || bodyExists">
+            v-if="isEditing || bodyExists">
       Add
     </button>
   </form>
@@ -27,19 +27,19 @@ export default {
   data: function() {
     return {
       body: '',
-      isEdithing: false,
+      isEditing: false,
     }
   },
   computed: {
-    classlist: function() {
-      const classlist = ['addcard']
-      if(this.isEdithing) {
-        classlist.push('active')
+    classList: function() {
+      const classList = ['addcard']
+      if(this.isEditing) {
+        classList.push('active')
       }
       if(this.bodyExists) {
-        classlist.push('addable')
+        classList.push('addable')
       }
-      return classlist
+      return classList
     },
     bodyExists() {
       return this.body.length > 0
@@ -47,11 +47,11 @@ export default {
   },
 
   methods: {
-    startEdithing: function() {
-      this.isEdithing = true
+    startEditing: function() {
+      this.isEditing = true
     },
-    finishEdithing: function() {
-      this.isEdithing = false
+    finishEditing: function() {
+      this.isEditing = false
     },
     addCardToList: function() {
       this.$store.dispatch('addCardToList', {body: this.body, listIndex: this.listIndex})

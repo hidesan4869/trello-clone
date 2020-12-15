@@ -159,7 +159,7 @@ main {
   cursor: pointer;
 }
 
-.clone-button {
+.close-button {
   position: absolute;
   top: 6px;
   right: 15px;
