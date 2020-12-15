@@ -1,7 +1,7 @@
 <template>
   <div>
     <header>
-      my Trello
+      M・D・S ~見えないところでどれだけサボれるか~
     </header>
     <main>
       <p class="info-line">All:{{ totalCardCount }}tasks</p>
