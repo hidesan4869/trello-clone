@@ -1,7 +1,10 @@
 <template>
   <div>
     <header>
-      M・D・S ~見えないところでどれだけサボれるか~
+      M・D・S
+      <div class="header-sub__title">
+      ~見えないところでどれだけサボれるか~
+      </div>
     </header>
     <main>
       <p class="info-line">All:{{ totalCardCount }}tasks</p>
